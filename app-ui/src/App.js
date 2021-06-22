@@ -1,21 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import TextBox from '@mycomp/textbox';
+import Label from '@mycomp/label';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <TextBox name='Username' id='username' required />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <form>
+          <Label forField="username" name="Username" />
+          <TextBox name='username' id='username' required placeholder="enter username" />
+          <Label forField="password" name="Password" />
+          <TextBox name='password' id='password' required placeholder="enter password" />
+          <input type="submit" value="Login"></input>
+        </form>
       </header>
     </div>
   );

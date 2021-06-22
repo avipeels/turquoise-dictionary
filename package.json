@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@mycomp/textbox": "0.1.0-alpha.0"
+    "@hapi/hapi": "^20.1.4",
+    "@mycomp/label": "^0.0.2-alpha.13",
+    "@mycomp/textbox": "^0.1.0-alpha.1"
   }
 }
