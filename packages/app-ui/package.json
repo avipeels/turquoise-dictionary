@@ -1,5 +1,5 @@
 {
-  "name": "app-ui",
+  "name": "@turquoise-dictionary/app-ui",
   "version": "0.1.0",
   "private": true,
   "publishConfig": {

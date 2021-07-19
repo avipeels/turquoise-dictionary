@@ -21,21 +21,17 @@ const init = async () => {
     server.route({
         method: 'POST',
         path: '/login',
-        handler: (request, h) => {
-            const payload = request.payload;
-            console.log(payload);
-            getValidatedUser(request.payload, request.payload.password)
-                .then((user) => {
-                    if (user) {
-                        return 'Auth successful';
-                    }
-                    else {
-                        return Boom.unauthorized('Bad email or password');
-                    }
-                })
-                .catch((err) => {
-                    return reply(Boom.badImplementation);
-                })
+        handler: async (request, reply) => {
+            try {
+                const isValidUser = await getValidatedUser(request.payload.email, request.payload.password);
+                if (!isValidUser) {
+                    return Boom.unauthorized('Bad email or password');
+                }
+                return isValidUser;
+            }
+            catch (e) {
+                return e;
+            }
         }
     });
     await server.start();
