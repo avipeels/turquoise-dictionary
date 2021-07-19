@@ -7,7 +7,13 @@ const getValidatedUser = require('./utils');
 const init = async () => {
     const server = Hapi.server({
         port: 5000,
-        host: 'localhost'
+        host: 'localhost',
+        routes: {
+            cors: {
+                origin: ["*"],
+                // headers: ['Accept', 'Content-Type', 'Access-Control-Allow-Origin']
+            }
+        }
     });
 
     server.route({
