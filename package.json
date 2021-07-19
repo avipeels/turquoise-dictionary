@@ -1,5 +1,6 @@
 {
   "name": "turquoise-dictionary",
+  "private": true,
   "devDependencies": {
     "lerna": "^3.21.0"
   },
@@ -9,5 +10,8 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "start": "lerna run start --parallel app-ui app-server"
+  }
 }
