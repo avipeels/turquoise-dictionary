@@ -13,6 +13,6 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "lerna run start --parallel --scope @turquoise-dictionary/app-ui --scope @turquoise-dictionary/app-server"
+    "start": "lerna run start --parallel --scope @turquoise-dictionary/app-ui --scope @turquoise-dictionary/app-server --scope @turquoise-dictionary/api-sdk"
   }
 }

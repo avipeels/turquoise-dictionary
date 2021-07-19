@@ -1,0 +1,10 @@
+{
+  "name": "@turquoise-dictionary/db-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "couchbase": "^3.1.3",
+    "uuid4": "^2.0.2"
+  }
+}

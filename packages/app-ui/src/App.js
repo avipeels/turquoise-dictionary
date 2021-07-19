@@ -13,6 +13,11 @@ const App = () => {
   const validateUser = (username, password) => {
     return axios.post('http://localhost:5000/login', {
       username, password
+    }, {
+      'content-type': 'application/json; charset=utf-8',
+      'vary': 'origin',
+      'access-control-expose-headers': 'WWW-Authenticate,Server-Authorization',
+
     });
   }
   const handleLoginClick = () => {

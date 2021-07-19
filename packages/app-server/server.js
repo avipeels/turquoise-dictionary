@@ -11,7 +11,6 @@ const init = async () => {
         routes: {
             cors: {
                 origin: ["*"],
-                // headers: ['Accept', 'Content-Type', 'Access-Control-Allow-Origin']
             }
         }
     });
