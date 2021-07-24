@@ -7,12 +7,13 @@
   "dependencies": {
     "@mycomp/button": "^0.1.0-alpha.1",
     "@mycomp/label": "^0.0.2-alpha.13",
-    "@mycomp/textbox": "^0.1.0-alpha.1"
+    "@mycomp/textbox": "^0.1.0-alpha.1",
+    "cross-env": "^7.0.3"
   },
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "start": "lerna run start --parallel --scope @turquoise-dictionary/app-ui --scope @turquoise-dictionary/app-server --scope @turquoise-dictionary/api-sdk"
+    "start": "lerna run start --parallel --scope @turquoise-dictionary/app-ui --scope @turquoise-dictionary/app-server"
   }
 }

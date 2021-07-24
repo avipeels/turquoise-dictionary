@@ -1,8 +1,6 @@
 const Hapi = require('@hapi/hapi');
 const Boom = require('@hapi/boom');
-const Joi = require('joi');
-const getValidatedUser = require('./utils');
-
+const getUser = require('../db-server/dist/index').getUser;
 
 const init = async () => {
     const server = Hapi.server({
@@ -28,7 +26,7 @@ const init = async () => {
         path: '/login',
         handler: async (request, reply) => {
             try {
-                const isValidUser = await getValidatedUser(request.payload.email, request.payload.password);
+                const isValidUser = await getUser(request.payload.email, request.payload.password);
                 if (!isValidUser) {
                     return Boom.unauthorized('Bad email or password');
                 }
