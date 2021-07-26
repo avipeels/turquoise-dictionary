@@ -8,7 +8,7 @@ const cluster = new couchbase.Cluster("couchbase://localhost", {
     password: 'dbuser'
 });
 
-const bucket = cluster.bucket('turqoise-dictionary');
+const bucket = cluster.bucket(BUCKET);
 const collection = bucket.defaultCollection();
 
 const upsertUser = async (doc) => {

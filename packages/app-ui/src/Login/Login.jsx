@@ -2,34 +2,21 @@ import React, { useState } from "react";
 import TextBox from "@mycomp/textbox";
 import Label from "@mycomp/label";
 import Button from "@mycomp/button";
-import axios from "axios";
 import "../App.css";
 import { StyledForm, StyledGroup } from "../styles";
 import { useHistory } from "react-router-dom";
+import { validateUser as v } from "@turquoise-dictionary/api-sdk";
 
 const Login = () => {
   const history = useHistory();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const validateUser = (username, password) => {
-    return axios.post(
-      "http://localhost:5000/login",
-      {
-        username,
-        password,
-      },
-      {
-        "content-type": "application/json; charset=utf-8",
-        vary: "origin",
-        "access-control-expose-headers":
-          "WWW-Authenticate,Server-Authorization",
-      }
-    );
+    return v(username, password);
   };
   const handleLoginClick = async () => {
     const isValidUser = await validateUser(username, password);
     if (isValidUser) history.push("/dashboard");
-    // console.log(isValidUser);
   };
   return (
     <div className="App">

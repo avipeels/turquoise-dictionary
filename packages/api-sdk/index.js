@@ -1,2 +1,2 @@
-import validateUser from './login';
+import { validateUser } from './login';
 export { validateUser };
