@@ -1,6 +1,8 @@
-const couchbase = require('couchbase');
-const uuid4 = require('uuid4');
-// const N1qlQuery = couchbase.N1qlQuery;
+
+import couchbase from 'couchbase';
+import uuid4 from 'uuid4';
+import { BUCKET } from './constants';
+
 const cluster = new couchbase.Cluster("couchbase://localhost", {
     username: 'dbuser',
     password: 'dbuser'
@@ -21,29 +23,13 @@ const upsertUser = async (doc) => {
     }
 }
 
-// get document function
-const getUser = async (email, password) => {
+export const getUser = async (email, password) => {
     try {
-        const result = await bucket.query(`SELECT * FROM \`turqoise-dictionary\` WHERE email = '${email}' AND \`password\`='${password}'`);
-        // bucket.query(query, (err, rows, meta) => {
-        //     console.log(rows);
-        // })
-        // const result = await cluster.query("SELECT * FROM `turqoise-dictionary` WHERE email = 'avinashpsk@gmail.com' AND `password`='12345'");
-        // const result = await collection.get(email);
-        // console.log(result.rows[0]['turqoise-dictionary']);
-        console.log(result);
-        return result;
-        // if (result.rows[0]['turqoise-dictionary']) return true;
-
-        // console.log(result[0]['turqoise-dictionary']);
+        const query = `SELECT EXISTS(SELECT * FROM \`turqoise-dictionary\` WHERE email = '${email}' AND \`password\`='${password}' ) AS validUser`
+        const { rows } = await cluster.query(query);
+        return rows[0].validUser || false;
     } catch (error) {
         console.error(error);
+        return error;
     }
 };
-
-// upsertUser({
-//     email: 'aaa@ggg.com',
-//     password: 'abc'
-// })
-
-getUser('avinashpsk@gmail.com', '12345');

@@ -26,8 +26,8 @@ const Login = () => {
       }
     );
   };
-  const handleLoginClick = () => {
-    const isValidUser = validateUser(username, password);
+  const handleLoginClick = async () => {
+    const isValidUser = await validateUser(username, password);
     if (isValidUser) history.push("/dashboard");
     // console.log(isValidUser);
   };

@@ -26,7 +26,7 @@ const init = async () => {
         path: '/login',
         handler: async (request, reply) => {
             try {
-                const isValidUser = await getUser(request.payload.email, request.payload.password);
+                const isValidUser = await getUser(request.payload.username, request.payload.password);
                 if (!isValidUser) {
                     return Boom.unauthorized('Bad email or password');
                 }
