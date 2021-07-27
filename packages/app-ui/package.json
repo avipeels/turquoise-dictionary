@@ -8,6 +8,8 @@
   "dependencies": {
     "@babel/core": "7.12.3",
     "@mycomp/textbox": "0.1.0-alpha.0",
+    "@mycomp/button": "0.1.0-alpha.1",
+    "@mycomp/label": "0.0.2-alpha.13",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "^5.11.4",

@@ -2644,12 +2644,12 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@mycomp/button@^0.1.0-alpha.1":
+"@mycomp/button@0.1.0-alpha.1", "@mycomp/button@^0.1.0-alpha.1":
   version "0.1.0-alpha.1"
   resolved "http://146.148.79.21:8081/repository/turquoise-components/@mycomp/button/-/button-0.1.0-alpha.1.tgz#e5b7683364c0983f453fe33f7fea27c7a0cdaf53"
   integrity sha512-9MkxjIScCH1nbQTCWya7+7SF2fLMFXp856/dKwc6VLHwtDutxcVPKSPjOjMW9cFWh4bEfbKyMRDU6Pt8U/Kdcw==
 
-"@mycomp/label@^0.0.2-alpha.13":
+"@mycomp/label@0.0.2-alpha.13", "@mycomp/label@^0.0.2-alpha.13":
   version "0.0.2-alpha.13"
   resolved "http://146.148.79.21:8081/repository/turquoise-components/@mycomp/label/-/label-0.0.2-alpha.13.tgz#1dc7cd7d406ac1f209edea3c36be2ba4b40e4f58"
   integrity sha512-N/G08Ek1EKyLEQEjts4sK1bZs83NLm7rWX7lCPuazz8C3LGcyN4D9f92AHicNskSDhrIukAeV8huJ9SZ3K0yGg==
