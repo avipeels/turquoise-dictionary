@@ -1,11 +1,7 @@
 {
-  "name": "@turquoise-dictionary/api-sdk",
+  "name": "@tudi/api-sdk",
   "version": "1.0.0",
   "main": "index.js",
-  "private": true,
-  "publishConfig": {
-    "registry": "http://146.148.79.21:8081/repository/turquoise-components/"
-  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
@@ -13,6 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
+    "artifactregistry-login": "npx google-artifactregistry-auth",
     "build": "cross-env BABEL_ENV=build BABEL_MODULES=true babel src --out-dir dist --config-file ./babel.config.js --delete-dir-on-start --no-comments"
   },
   "devDependencies": {

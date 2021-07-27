@@ -5,7 +5,7 @@ import Button from "@mycomp/button";
 import "../App.css";
 import { StyledForm, StyledGroup } from "../styles";
 import { useHistory } from "react-router-dom";
-import { validateUser as v } from "@turquoise-dictionary/api-sdk";
+import { validateUser as v } from "@tudi/api-sdk";
 
 const Login = () => {
   const history = useHistory();
