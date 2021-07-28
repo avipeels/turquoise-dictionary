@@ -1,13 +1,13 @@
 steps:
-  - name: node
+  - name: "gcr.io/cloud-builders/nodejs"
     entrypoint: yarn
     args: ["install"]
-  - name: node
+  - name: "gcr.io/cloud-builders/nodejs"
     entrypoint: yarn
     args: ["run", "build"]
-  - name: node
+  - name: "gcr.io/cloud-builders/nodejs"
     entrypoint: npm
     args: ["artifactregistry-login", "./.npmrc"]
-  - name: node
+  - name: "gcr.io/cloud-builders/nodejs"
     entrypoint: npm
     args: ["publish"]
