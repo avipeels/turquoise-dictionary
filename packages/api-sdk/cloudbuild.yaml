@@ -4,9 +4,6 @@ steps:
     args: ["install"]
   - name: node
     entrypoint: yarn
-    args: ["run","build-sdk"]
-  - name: node
-    entrypoint: yarn
     args: ["artifactregistry-login", "./.npmrc"]
   - name: node
     entrypoint: yarn
