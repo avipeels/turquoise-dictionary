@@ -4,7 +4,7 @@ steps:
     args: ["install"]
   - name: gcr.io/proven-wavelet-314512/node
     entrypoint: yarn
-    args: ["run", "build"]
+    args: ["build"]
   - name: gcr.io/proven-wavelet-314512/node
     entrypoint: npm
     args: ["artifactregistry-login", "./.npmrc"]
