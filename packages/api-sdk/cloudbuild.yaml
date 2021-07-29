@@ -1,13 +1,13 @@
 steps:
-  - name: gcr.io/cloud-builders/nodejs
+  - name: gcr.io/proven-wavelet-314512/node
     entrypoint: yarn
     args: ["install"]
-  - name: gcr.io/cloud-builders/nodejs
+  - name: gcr.io/proven-wavelet-314512/node
     entrypoint: yarn
     args: ["run", "build"]
-  - name: gcr.io/cloud-builders/nodejs
+  - name: gcr.io/proven-wavelet-314512/node
     entrypoint: npm
     args: ["artifactregistry-login", "./.npmrc"]
-  - name: gcr.io/cloud-builders/nodejs
+  - name: gcr.io/proven-wavelet-314512/node
     entrypoint: npm
     args: ["publish"]
