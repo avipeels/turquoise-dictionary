@@ -1,13 +1,13 @@
 steps:
   - name: node
-    entrypoint: npm
+    entrypoint: yarn
     args: ["install"]
   - name: node
-    entrypoint: npm
+    entrypoint: yarn
     args: ["run","build-sdk"]
   - name: node
-    entrypoint: npm
+    entrypoint: yarn
     args: ["artifactregistry-login", "./.npmrc"]
   - name: node
-    entrypoint: npm
+    entrypoint: yarn
     args: ["publish"]
