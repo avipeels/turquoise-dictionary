@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node index.js",
     "artifactregistry-login": "npx google-artifactregistry-auth",
-    "build-sdk": "cross-env BABEL_ENV=build BABEL_MODULES=true babel src --out-dir dist --config-file ./babel.config.js --delete-dir-on-start --no-comments"
+    "buildsdk": "cross-env BABEL_ENV=build BABEL_MODULES=true babel src --out-dir dist --config-file ./babel.config.js --delete-dir-on-start --no-comments"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
