@@ -2,5 +2,4 @@ steps:
   - name: node
     args: ['yarn','run','install']
   - name: node
-    entrypoint: yarn
     args: ['yarn','run','buildsdk']
