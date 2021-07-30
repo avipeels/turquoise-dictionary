@@ -1,5 +1,5 @@
 steps:
   - name: node
-    args: ['yarn','run','install']
+    args: ['yarn','install']
   - name: node
-    args: ['yarn','run','buildsdk']
+    args: ['yarn','buildsdk']
