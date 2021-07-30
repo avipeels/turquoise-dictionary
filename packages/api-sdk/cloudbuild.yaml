@@ -4,4 +4,4 @@ steps:
     args: ["install"]
   - name: node
     entrypoint: yarn
-    args: ["build-sdk"]
+    args: ["buildsdk"]
